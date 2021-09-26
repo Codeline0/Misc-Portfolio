@@ -1,0 +1,251 @@
+html, body {
+  margin: 0;
+  height: 100vh;
+  min-width: 100px;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  background-color: #0B0C10;
+  color: #f8faf9;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  background-image: url("");
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 1em;
+  background-color: #1F2833;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Unica One", sans-serif;
+  text-transform: uppercase;
+}
+
+.navbar__logo {
+  color: #66FCF1;
+  font-size: 40px;
+}
+
+.navbar__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+}
+
+.navbar__item--link {
+  text-decoration: none;
+  color: #66FCF1;
+  font-size: 20px;
+}
+
+.navbar__item--link:hover {
+  color: #c9d5d4;
+}
+
+.navbar__dropdown {
+  display: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 1em;
+  width: 2em;
+  height: 2em;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+.navbar__dropImg {
+  width: 50%;
+  margin: 0;
+  padding: .5em;
+}
+
+.banner {
+  background: -webkit-gradient(linear, left bottom, left top, from(#0B0C10), to(#1F2833));
+  background: linear-gradient(0deg, #0B0C10 0%, #1F2833 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
+  width: 100%;
+  height: 70vh;
+}
+
+.banner__title {
+  font-size: 5em;
+  margin: 0;
+  padding: 0;
+  color: #66FCF1;
+  font-family: "Oswald";
+  text-transform: uppercase;
+}
+
+.banner__phrase {
+  margin: 0;
+  color: #c9d5d4;
+  margin-bottom: 2em;
+  font-size: 2em;
+}
+
+.banner__button, .content__button {
+  color: #c9d5d4;
+  font-family: "Unica One";
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: .5em .9em;
+  border: 2px solid #66FCF1;
+  background-color: transparent;
+}
+
+.banner__button:hover, .content__button:hover {
+  background-color: #66FCF1;
+  color: #0B0C10;
+}
+
+.content__aboutMe {
+  padding: 5em 3em 10em 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.content__main {
+  width: 35em;
+  text-align: left;
+  margin-top: 4em;
+}
+
+.content__services {
+  padding: 1em 3em;
+}
+
+.content__hireMe {
+  background-color: #66FCF1;
+  padding: 1em;
+}
+
+.content__title {
+  text-transform: uppercase;
+  color: #c9d5d4;
+}
+
+.content__title--aboutMe {
+  text-align: left;
+}
+
+.content__button {
+  font-size: 16px;
+  margin: 2em 0em;
+}
+
+.content__button--hireMe {
+  background-color: #1F2833;
+  border: 2px solid #1F2833;
+  color: #c9d5d4;
+  font-size: 20px;
+}
+
+.content__button--hireMe:hover {
+  background-color: #c9d5d4;
+  color: #0B0C10;
+  border: 2px solid #0B0C10;
+}
+
+.content__phrase {
+  color: #1F2833;
+}
+
+.content__img {
+  width: 20em;
+  height: auto;
+  margin-top: 4em;
+  -webkit-box-shadow: 2em -2em #c9d5d4;
+          box-shadow: 2em -2em #c9d5d4;
+}
+
+.panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 8em;
+  margin-bottom: 10em;
+}
+
+.panel__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #c9d5d4;
+  color: #1F2833;
+  width: 20em;
+  height: 20em;
+  -webkit-transition: background-color 500ms ease-in-out;
+  transition: background-color 500ms ease-in-out;
+}
+
+.panel__card:hover {
+  background-color: #66FCF1;
+}
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #1F2833;
+  padding: 2em;
+  font-size: 0.7em;
+}
+
+@media only screen and (max-width: 768px), screen and (orientation: portrait) {
+  .navbar__content {
+    display: none;
+  }
+  .navbar__dropdown {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .banner__title {
+    font-size: 3em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

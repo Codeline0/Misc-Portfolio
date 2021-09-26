@@ -1,0 +1,254 @@
+// Variables
+$breakpoint-tablet: 768px; 
+$breakpoint-site: 680px;
+$background-color: #0B0C10;
+$nav-color: #1F2833; 
+$primary-color: #66FCF1;
+$neutral-color: #c9d5d4;
+$text-color: #f8faf9;
+$main-font: "Unica One";
+$text-font: "Montserrat";
+$title-font: "Oswald";
+
+
+html, body {
+    margin: 0;
+    height: 100vh;
+    min-width: 100px;
+}
+
+body {
+    display: grid;
+    text-align: center;
+    background-color: $background-color;
+    color: $text-color;
+    font-family: $text-font, sans-serif;
+}
+
+header {
+    background-image: url("");
+}
+
+.navbar {
+    display: flex;
+    padding: 0 1em;
+    background-color: $nav-color;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $main-font, sans-serif;
+    text-transform: uppercase;
+
+    
+    &__logo {
+        color: $primary-color;
+        font-size: 40px;
+    }
+    
+    &__content  {
+        display: flex;
+        list-style-type: none;
+        gap: 30px;
+    }
+    
+    &__item {
+        
+        &--link {
+            text-decoration: none;
+            color: $primary-color;
+            font-size: 20px;
+
+            &:hover {
+                color: $neutral-color;
+            }
+            
+        }   
+
+        
+        
+    }
+    
+    &__dropdown {
+        display: none;
+        padding: 0;
+        margin: 0;
+        margin-right: 1em;
+        width: 2em;
+        height: 2em;
+        border: 3px solid black;
+        border-radius: 50%;
+        
+    }
+    
+    &__dropImg {
+        width: 50%;
+        margin: 0;
+        padding: .5em;
+    }
+}
+
+.banner {
+    background: linear-gradient(0deg, $background-color 0%, $nav-color 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    width: 100%;
+    height: 70vh;
+
+    &__title {
+        font-size: 5em;
+        margin: 0;
+        padding: 0;
+        color: $primary-color;
+        font-family: $title-font;
+        text-transform: uppercase;
+    }
+
+    &__phrase {
+        margin: 0;
+        color: $neutral-color;
+        margin-bottom: 2em;
+        font-size: 2em;
+    }
+
+    &__button {
+        color: $neutral-color;
+        font-family: $main-font;
+        font-size: 20px;
+        text-transform: uppercase;
+        padding: .5em .9em;
+        border: 2px solid $primary-color;
+        background-color: transparent;
+        
+
+        &:hover {
+            background-color: $primary-color;
+            color: $background-color;
+        }
+    }
+}
+
+.content {
+
+    &__aboutMe {
+        padding: 5em 3em 10em 3em;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__main {
+        width: 35em;
+        text-align: left;
+        margin-top: 4em;
+    }
+
+    &__services {
+        padding: 1em 3em;
+    }
+
+    &__hireMe {
+        background-color: $primary-color;
+        padding: 1em;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        color: $neutral-color;
+        &--aboutMe {
+            text-align: left
+        }
+    }
+
+    &__button {
+        @extend .banner__button;
+        font-size: 16px;
+        margin: 2em 0em;
+
+        &--hireMe {
+            background-color: $nav-color;
+            border: 2px solid $nav-color;
+            color: $neutral-color;
+            font-size: 20px;
+
+            &:hover {
+                background-color: $neutral-color;
+                color: $background-color;
+                border: 2px solid $background-color;
+            }
+        }
+    }
+
+    &__phrase {
+        color: $nav-color;
+    }
+
+    &__img {
+        // margin-left: 10em;
+        width: 20em;
+        height: auto;
+        margin-top: 4em;
+        box-shadow: 2em -2em $neutral-color;
+    }
+    
+}
+
+
+.panel {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 8em;
+    margin-bottom: 10em;
+
+    &__card {
+        display: flex;
+        margin: 2em;
+        justify-content: center;
+        align-items: center;
+        background-color: $neutral-color;
+        color: $nav-color;
+        width: 20em;
+        height: 20em;
+        transition: background-color 500ms ease-in-out;
+
+        &:hover {
+            background-color: $primary-color;
+        }
+    }
+
+}
+
+.copyright {
+    display: flex;
+    background-color: $nav-color;
+    padding: 2em;
+    font-size: 0.7em;
+}
+
+
+@media only screen and (max-width: $breakpoint-tablet), screen and (orientation: portrait) {
+
+    .navbar {
+        
+        &__content {
+            display: none;
+        }
+
+        &__dropdown {
+            display: inline-block;
+        } 
+    }  
+}
+
+@media only screen and (max-width: $breakpoint-site) {
+
+    .banner {
+        &__title {
+            font-size: 3em;
+        }
+    }
+
+    
+}
